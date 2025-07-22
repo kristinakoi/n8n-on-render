@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: YOUR_DB_HOST
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: YOUR_DB_NAME
+      - key: DB_POSTGRESDB_USER
+        value: YOUR_DB_USER
+      - key: DB_POSTGRESDB_PASSWORD
+        value: YOUR_DB_PASSWORD
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: kristina
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: secure123
+      - key: WEBHOOK_URL
+        value: https://n8n-on-render.onrender.com
