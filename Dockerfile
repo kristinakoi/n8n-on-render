@@ -5,4 +5,4 @@ ENV N8N_HOST=0.0.0.0
 ENV N8N_PROTOCOL=https
 ENV NODE_ENV=production
 
-CMD ["n8n", "start"]
+ENTRYPOINT ["npx", "n8n"]
