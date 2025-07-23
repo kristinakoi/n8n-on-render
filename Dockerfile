@@ -1,8 +1,10 @@
 FROM n8nio/n8n:latest
 
-ENV N8N_PORT=${PORT}
+ENV N8N_PORT=5678
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PROTOCOL=http
 ENV NODE_ENV=production
+
+EXPOSE 5678
 
 ENTRYPOINT ["npx", "n8n"]
